@@ -7,16 +7,6 @@ def fizzbuzz number
 	elsif number >= 1000000001
 		'Get a grip, that\'s ridiculous!'
 	else
-
-
-case
-	when number % 15 == 0 then 'fizzbuzz'
-	when number % 5 == 0 then 'buzz'
-	when number % 3 == 0 then 'fizz'
-	else
-		number
+		number % 15 == 0 ? 'fizzbuzz' : number % 5 == 0 ? 'buzz' : number % 3 == 0 ? 'fizz' : number
+		end
 	end
-end
-end
-
-end

@@ -1,10 +1,10 @@
 
 require 'fizzbuzz'
 
-describe 'fizzbuzz' do 
-	it 'returns "fizz" when passed 3' do 
+describe 'fizzbuzz' do
+	it 'returns "fizz" when passed 3' do
 		expect(fizzbuzz(3)).to eq 'fizz'
-	end	
+	end
 
 	it 'returns "4" when passed 4' do
 		expect(fizzbuzz(4)).to eq 4
@@ -27,11 +27,13 @@ describe 'fizzbuzz' do
 	end
 
 	it 'returns "fizz" when passed random number that is divisible by 3' do
-		expect(fizzbuzz(rand(999) * 3)).to eq 'fizz'
+			fives = (1..1001).select {|i| i % 3 == 0 && i % 15 != 0}
+			fives.each { |x| expect(fizzbuzz(x)).to eq 'fizz'}
 	end
 
 	it 'returns "buzz" when passed random number that is divisible by 5' do
-		expect(fizzbuzz(rand(999) * 5)).to eq 'buzz'
+		fives = (1..1001).select {|i| i % 5 == 0 && i % 15 != 0}
+		fives.each { |x| expect(fizzbuzz(x)).to eq 'buzz'}
 	end
 
 	it 'returns "fizzbuzz" when passed random number that is divisible by 15' do
